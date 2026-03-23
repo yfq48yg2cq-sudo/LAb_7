@@ -1,70 +1,69 @@
-/* Page styling */
+/* Page background */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
-  color: white;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
   margin: 0;
-  padding: 20px;
+  padding: 30px;
 }
 
 /* Header */
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.header h1 {
+h1 {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 2px;
+  text-align: center;
 }
 
-.subtitle {
+p {
+  text-align: center;
   font-style: italic;
-  color: #ccc;
+  color: #d0d0d0;
 }
 
-/* Table */
+/* Table container */
 #planets {
-  width: 100%;
+  width: 90%;
+  margin: 30px auto;
   border-collapse: collapse;
-  background-color: rgba(255,255,255,0.05);
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 /* Header row */
 #planets th {
-  background-color: #111;
+  background: #111;
   padding: 15px;
   text-transform: uppercase;
-  font-weight: bold;
+  letter-spacing: 1px;
   border-bottom: 2px solid #444;
 }
 
-/* Cells */
-#planets td {
-  padding: 12px;
-  text-align: center;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-/* Left column (labels) */
-.row-title {
+/* Left column labels */
+#planets td:first-child {
   font-weight: bold;
   text-align: left;
   padding-left: 15px;
-  background-color: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.3);
 }
 
-/* Alternating rows */
+/* All cells */
+#planets td {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Row striping */
 #planets tr:nth-child(even) {
-  background-color: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.03);
 }
 
 /* Hover effect */
 #planets tr:hover {
-  background-color: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.12);
+  transition: 0.3s;
 }
 
 /* Images */
@@ -73,12 +72,26 @@ body {
   height: 70px;
   border-radius: 50%;
   border: 2px solid white;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Hover glow */
+#planets img:hover {
+  transform: scale(1.25) rotate(8deg);
+  box-shadow: 0 0 20px rgba(255,255,255,0.7);
 }
 
 /* Footer */
-.footer {
+footer {
   text-align: center;
   margin-top: 20px;
-  font-size: 0.9rem;
   color: #bbb;
 }
