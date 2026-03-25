@@ -2,7 +2,7 @@
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: #ffffff;
+  color: white;
   margin: 0;
   padding: 30px;
 }
@@ -46,7 +46,7 @@ p {
   font-weight: bold;
   text-align: left;
   padding-left: 15px;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.4);
 }
 
 /* All cells */
@@ -57,7 +57,7 @@ p {
 
 /* Row striping */
 #planets tr:nth-child(even) {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.05);
 }
 
 /* Hover effect */
